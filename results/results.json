@@ -1,10 +1,10 @@
 [
   {
     "title": "SSC GD Constable Final Result",
-    "url": "results/ssc-gd.html"
+    "url": "./results/ssc-gd.html"
   },
   {
     "title": "Railway Group D Result",
-    "url": "results/railway-group-d.html"
+    "url": "./results/railway-group-d.html"
   }
 ]
