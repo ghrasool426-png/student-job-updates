@@ -1,29 +1,34 @@
-fetch('./results/results.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('JSON not found');
-    }
-    return response.json();
-  })
-  .then(data => {
-    const ul = document.getElementById('results-list');
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Safety check
-    if (!ul) return;
+  fetch('./results/results.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('JSON not found');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const ul = document.getElementById('results-list');
 
-    ul.innerHTML = '';
+      // Safety check
+      if (!ul) return;
 
-    data.forEach(item => {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
+      // Clear "Loading results..."
+      ul.innerHTML = '';
 
-      a.href = item.url;
-      a.textContent = item.title;
+      data.forEach(item => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
 
-      li.appendChild(a);
-      ul.appendChild(li);
+        a.href = item.url;
+        a.textContent = item.title;
+
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+    })
+    .catch(error => {
+      console.error('Results load error:', error);
     });
-  })
-  .catch(error => {
-    console.error('Results load error:', error);
-  });
+
+});
