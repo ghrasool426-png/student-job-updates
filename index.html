@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Student Job Updates | Results, Jobs, Admit Card, Scholarships</title>
-<meta name="description" content="Latest results, government jobs, admit cards, answer keys, JKSSB updates, admissions, exam dates, private jobs and scholarships for students.">
+<title>Student Job Updates | Results, Jobs, Admit Card, JKSSB, Scholarships</title>
+<meta name="description" content="Latest government job updates, results, admit cards, answer keys, syllabus, exam dates, admissions, JKSSB updates and scholarships for students.">
 
 <style>
 body{
@@ -18,12 +18,16 @@ body{
 header{
   background:#8b0000;
   color:#fff;
-  padding:12px;
   text-align:center;
+  padding:15px;
 }
 header h1{
   margin:0;
   font-size:26px;
+}
+header p{
+  margin:5px 0 0;
+  font-size:14px;
 }
 
 /* MENU */
@@ -67,6 +71,7 @@ nav ul li a:hover{
 .two-col{
   display:flex;
   gap:10px;
+  margin-bottom:15px;
 }
 .col{
   width:50%;
@@ -78,8 +83,8 @@ nav ul li a:hover{
   background:#b30000;
   color:#fff;
   padding:8px;
-  text-align:center;
   font-size:18px;
+  text-align:center;
 }
 .col ul{
   margin:0;
@@ -94,6 +99,39 @@ nav ul li a:hover{
   text-decoration:none;
 }
 .col ul li a:hover{
+  text-decoration:underline;
+}
+
+/* GRID SECTIONS */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap:12px;
+}
+.box{
+  background:#fff;
+  border:1px solid #ccc;
+}
+.box h2{
+  background:#8b0000;
+  color:#fff;
+  margin:0;
+  padding:8px;
+  font-size:17px;
+  text-align:center;
+}
+.box ul{
+  margin:0;
+  padding:10px 20px;
+}
+.box ul li{
+  padding:6px 0;
+}
+.box ul li a{
+  color:#0033cc;
+  text-decoration:none;
+}
+.box ul li a:hover{
   text-decoration:underline;
 }
 
@@ -130,51 +168,116 @@ footer a{
   <p>Results • Latest Jobs • Admit Card • JKSSB • Scholarships</p>
 </header>
 
-<!-- MENU / WAIT BAR -->
 <nav>
   <ul>
     <li><a href="#">Home</a></li>
-    <li><a href="#">Latest Updates</a></li>
+    <li><a href="#">Latest</a></li>
     <li><a href="#">Results</a></li>
     <li><a href="#">Admit Card</a></li>
     <li><a href="#">Answer Key</a></li>
+    <li><a href="#">Syllabus</a></li>
     <li><a href="#">Exam Date</a></li>
-    <li><a href="#">JKSSB</a></li>
     <li><a href="#">Admission</a></li>
-    <li><a href="#">Private Jobs</a></li>
+    <li><a href="#">JKSSB</a></li>
     <li><a href="#">Scholarship</a></li>
   </ul>
 </nav>
 
 <div class="container">
 
+<!-- RESULTS + LATEST JOBS -->
 <div class="two-col">
 
-  <!-- RESULTS -->
   <div class="col">
     <h2>Results</h2>
     <ul>
-      <li><a href="#">RRVUNL Technician Result 2026 – Out</a></li>
-      <li><a href="#">RSSB Platoon Commander Result 2026 – Out</a></li>
-      <li><a href="#">RSSB Group D Result 2026 – Out</a></li>
-      <li><a href="#">SSC GD Constable Final Result 2025 – Out</a></li>
-      <li><a href="#">IBPS PO Final Result 2026 – Out</a></li>
-      <li><a href="#">Bihar BTSC Tutor Nursing Result 2026 – Out</a></li>
-      <li><a href="#">SSC Delhi Police Constable Answer Key 2026</a></li>
+      <li><a href="#">SSC GD Constable Final Result</a></li>
+      <li><a href="#">Railway Group D Result</a></li>
+      <li><a href="#">JKSSB Exam Result</a></li>
+      <li><a href="#">Bank PO Final Result</a></li>
+      <li><a href="#">CTET Result</a></li>
+      <li><a href="#">State Govt Exam Results</a></li>
     </ul>
   </div>
 
-  <!-- LATEST JOBS -->
   <div class="col">
     <h2>Latest Jobs</h2>
     <ul>
-      <li><a href="#">UP Police Computer Operator Correction Form 2026</a></li>
-      <li><a href="#">Exim Bank Deputy Manager Online Form 2026</a></li>
-      <li><a href="#">UP Police Constable Online Form 2026 (32679 Post)</a></li>
-      <li><a href="#">Railway RRB Group D Online Form 2026</a></li>
-      <li><a href="#">UPSSSC Lekhpal Online Form 2026</a></li>
-      <li><a href="#">CSBC Bihar Constable Recruitment Update</a></li>
-      <li><a href="#">RSSB Clerk / Junior Assistant Online Form 2026</a></li>
+      <li><a href="#">SSC New Recruitment Notification</a></li>
+      <li><a href="#">Railway Online Form</a></li>
+      <li><a href="#">Police Constable Vacancy</a></li>
+      <li><a href="#">Bank Clerk Recruitment</a></li>
+      <li><a href="#">Army / Defence Jobs</a></li>
+      <li><a href="#">State Govt Vacancies</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ALL OTHER SECTIONS -->
+<div class="grid">
+
+  <div class="box">
+    <h2>Admit Card</h2>
+    <ul>
+      <li><a href="#">SSC / Railway Admit Cards</a></li>
+      <li><a href="#">JKSSB Admit Card</a></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Answer Key</h2>
+    <ul>
+      <li><a href="#">SSC Answer Key</a></li>
+      <li><a href="#">JKSSB Answer Key</a></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Syllabus</h2>
+    <ul>
+      <li><a href="#">Exam-wise Syllabus</a></li>
+      <li><a href="#">Latest Exam Pattern</a></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Exam Date</h2>
+    <ul>
+      <li><a href="#">Upcoming Exam Schedule</a></li>
+      <li><a href="#">JKSSB Exam Dates</a></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Admission</h2>
+    <ul>
+      <li><a href="#">IGNOU / University Admissions</a></li>
+      <li><a href="#">Entrance Exam Admissions</a></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Private Sector Jobs</h2>
+    <ul>
+      <li><a href="#">Private Company Vacancies</a></li>
+      <li><a href="#">Work From Home Jobs</a></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>JKSSB</h2>
+    <ul>
+      <li><a href="#">JKSSB Jobs</a></li>
+      <li><a href="#">JKSSB Results & Admit Cards</a></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Scholarships</h2>
+    <ul>
+      <li><a href="#">National Scholarship Portal</a></li>
+      <li><a href="#">State & Minority Scholarships</a></li>
     </ul>
   </div>
 
@@ -189,7 +292,7 @@ footer a{
 <a href="#">Privacy Policy</a> |
 <a href="#">Disclaimer</a>
 </p>
-<p>Always verify information from official websites.</p>
+<p>This website is for information purposes only. Always verify details from official sources.</p>
 </footer>
 
 </body>
