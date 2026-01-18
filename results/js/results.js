@@ -1,7 +1,16 @@
-fetch('results/results.json')
-  .then(response => response.json())
+fetch('./results/results.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('JSON not found');
+    }
+    return response.json();
+  })
   .then(data => {
     const ul = document.getElementById('results-list');
+
+    // Safety check
+    if (!ul) return;
+
     ul.innerHTML = '';
 
     data.forEach(item => {
@@ -14,4 +23,7 @@ fetch('results/results.json')
       li.appendChild(a);
       ul.appendChild(li);
     });
+  })
+  .catch(error => {
+    console.error('Results load error:', error);
   });
