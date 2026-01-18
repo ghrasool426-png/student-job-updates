@@ -1,24 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  fetch('./results/results.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('JSON not found');
-      }
+  fetch('https://ghrasool426-png.github.io/student-job-updates/results/results.json')
+    .then(function (response) {
       return response.json();
     })
-    .then(data => {
-      const ul = document.getElementById('results-list');
+    .then(function (data) {
+      var ul = document.getElementById('results-list');
 
-      // Safety check
-      if (!ul) return;
+      if (!ul) {
+        console.log('results-list not found');
+        return;
+      }
 
-      // Clear "Loading results..."
       ul.innerHTML = '';
 
-      data.forEach(item => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
+      data.forEach(function (item) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
 
         a.href = item.url;
         a.textContent = item.title;
@@ -27,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
         ul.appendChild(li);
       });
     })
-    .catch(error => {
-      console.error('Results load error:', error);
+    .catch(function (error) {
+      console.error('Final Results Error:', error);
     });
 
 });
