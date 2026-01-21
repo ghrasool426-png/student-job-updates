@@ -171,7 +171,7 @@ footer a{
 <nav>
   <ul>
     <li><a href="#">Home</a></li>
-    <li><a href="#">Latest</a></li>
+    <li><a href="latest-update/">Latest</a></li>
     <li><a href="#">Results</a></li>
     <li><a href="#">Admit Card</a></li>
     <li><a href="#">Answer Key</a></li>
@@ -188,7 +188,7 @@ footer a{
 <!-- RESULTS + LATEST JOBS -->
 <div class="two-col">
 
-  <!-- ✅ AUTO RESULTS SECTION -->
+  <!-- RESULTS -->
   <div class="col">
     <h2>Results</h2>
     <ul id="results-list">
@@ -196,21 +196,17 @@ footer a{
     </ul>
   </div>
 
+  <!-- ✅ AUTO LATEST JOB (ONLY ONE FROM JSON) -->
   <div class="col">
     <h2>Latest Jobs</h2>
-    <ul>
-      <li><a href="#">SSC New Recruitment Notification</a></li>
-      <li><a href="#">Railway Online Form</a></li>
-      <li><a href="#">Police Constable Vacancy</a></li>
-      <li><a href="#">Bank Clerk Recruitment</a></li>
-      <li><a href="#">Army / Defence Jobs</a></li>
-      <li><a href="#">State Govt Vacancies</a></li>
+    <ul id="latest-jobs-list">
+      <li>Loading latest job...</li>
     </ul>
   </div>
 
 </div>
 
-<!-- ALL OTHER SECTIONS -->
+<!-- OTHER SECTIONS -->
 <div class="grid">
 
   <div class="box">
@@ -291,8 +287,11 @@ footer a{
 <p>This website is for information purposes only. Always verify details from official sources.</p>
 </footer>
 
-<!-- ✅ AUTO RESULTS SCRIPT (DEFER = SAFE) -->
+<!-- RESULTS AUTO -->
 <script src="js/results.js" defer></script>
+
+<!-- ✅ LATEST JOB AUTO (ONE ONLY) -->
+<script src="js/latest-jobs.js" defer></script>
 
 </body>
 </html>
